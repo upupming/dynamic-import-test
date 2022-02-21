@@ -1,0 +1,19 @@
+{
+  "name": "dynamic-import-test",
+  "version": "1.0.0",
+  "description": "Test for the ability to splitting chunks for dynamic import.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:esbuild": "esbuild --bundle main.js --outdir=dist.esbuild --format=esm --splitting",
+    "build:rollup": "rollup --config rollup.config.js",
+    "build:esbuild:cjs": "esbuild --bundle main.js --outdir=dist.esbuild --format=cjs --splitting"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.14.23",
+    "rollup": "2.67.3"
+  }
+}
